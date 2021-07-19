@@ -1,13 +1,14 @@
 {
-	"name": "MonitoRSS",
-	"description": "Discord RSS bot with customizable feeds",
-	"website": "https://github.com/synzen/MonitoRSS",
-	"logo": "https://discordapp.com/assets/d36b33903dafb0107bb067b55bdd9cbc.svg",
+	"name": "Goodpick News",
+	"description": "Votre source d'informations crypto",
+	"website": "https://github.com/nQuery512/MonitoRSS-Clone/",
+	"logo": "https://github.com/nQuery512/MonitoRSS-Clone/blob/master/logo_only_orange.svg",
 	"keywords": [
 		"discord",
 		"bot",
 		"rss",
-		"feed"
+		"feed",
+		"goodpick"
 	],
 	"addons": [{
 			"plan": "heroku-redis:hobby-dev"

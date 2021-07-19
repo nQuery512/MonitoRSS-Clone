@@ -26,6 +26,6 @@ COPY --from=build /usr/src .
 # to virtual machine
 COPY --chown=node:node . .
 USER node
-ENV DRSS_BOT_TOKEN='drss_docker_token' \
-    DRSS_DATABASE_URI='mongodb://mongo:27017/rss'
+ENV DRSS_BOT_TOKEN='KNTkxOTUxMTU2MTg4NTQ1MDI1.XQ4PeQ.e1A_1sF0W7_rmCPJsMdhur8Bevo' \
+    DRSS_DATABASE_URI='mongodb://mrss-mongo:27017/rss'
 CMD ["node", "server.js"]

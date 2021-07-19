@@ -21,19 +21,19 @@ services:
     container_name: mrss-bot-container
     restart: on-failure:3
     # The image can also be used
-    # image: synzen/monitorss
-    build: .
+    image: test
+    #build: .
     depends_on:
       - mrss-mongo
     environment:
       - DRSS_START=bot
-      - DRSS_BOT_TOKEN=
+      - DRSS_BOT_TOKEN=KNTkxOTUxMTU2MTg4NTQ1MDI1.XQ4PeQ.e1A_1sF0W7_rmCPJsMdhur8Bevo
       - DRSS_DATABASE_URI=mongodb://mrss-mongo:27017/rss
   mrss-web:
     container_name: mrss-web-container
     # The image can also be used
-    # image: synzen/monitorss
-    build: .
+    image: test
+    #build: .
     restart: on-failure:3
     depends_on:
       - mrss-redis
@@ -42,12 +42,12 @@ services:
       - "8081:8081"
     environment:
       - DRSS_START=web
-      - DRSSWEB_BOT_TOKEN=
+      - DRSSWEB_BOT_TOKEN=KNTkxOTUxMTU2MTg4NTQ1MDI1.XQ4PeQ.e1A_1sF0W7_rmCPJsMdhur8Bevo
       - DRSSWEB_DATABASE_REDIS=redis://mrss-redis:6379
       - DRSSWEB_DATABASE_URI=mongodb://mrss-mongo:27017/rss
-      - DRSSWEB_BOT_REDIRECTURI=
-      - DRSSWEB_BOT_CLIENTID=
-      - DRSSWEB_BOT_CLIENTSECRET=
+      - DRSSWEB_BOT_REDIRECTURI=http://localhost:8081/authorize
+      - DRSSWEB_BOT_CLIENTID=591951156188545025
+      - DRSSWEB_BOT_CLIENTSECRET=KH14yvSVb6NTMYva7azG50s9nx7ayOx5E
 
 volumes:
   db-data:
